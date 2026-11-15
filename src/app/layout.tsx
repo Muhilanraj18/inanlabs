@@ -51,7 +51,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className="h-full antialiased dark"
       style={{
-        background: "linear-gradient(180deg, #05113a 0%, #066680 20%, #348d9f 42%, #066680 64%, #684554 85%, #05113a 100%) fixed",
+        background: "linear-gradient(180deg, #51e2f5 0%, #9df9ef 22%, #edf7f6 45%, #ffa8b6 72%, #a28089 100%) fixed",
         color: "#f4faf9",
       }}
     >
@@ -66,7 +66,7 @@ export default function RootLayout({
       <body
         className="min-h-full flex flex-col dark"
         style={{
-          background: "linear-gradient(180deg, #05113a 0%, #066680 20%, #348d9f 42%, #066680 64%, #684554 85%, #05113a 100%) fixed",
+          background: "linear-gradient(180deg, #51e2f5 0%, #9df9ef 22%, #edf7f6 45%, #ffa8b6 72%, #a28089 100%) fixed",
           color: "#f4faf9",
         }}
       >

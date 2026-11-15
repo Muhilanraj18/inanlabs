@@ -38,6 +38,14 @@ export function VantaCloudsBackground({ scrollProgress = 0 }: VantaCloudsBackgro
             minHeight: 200.0,
             minWidth: 200.0,
             speed: 1.0,
+            // ── ORIGINAL DAYTIME CLOUD COLOUR & LIGHTING ──
+            skyColor: 0x68b8d7,        // Clean bright daytime blue sky
+            cloudColor: 0xadc1de,      // Silvery-white cumulus clouds
+            cloudShadowColor: 0x183550,// Deep atmospheric cloud shadow
+            sunColor: 0xffa919,        // Golden sun
+            sunlightColor: 0xffa933,    // Warm sunlight rays
+            sunGlareColor: 0xff6633,   // Sun glare
+            backgroundColor: 0xffffff, // Crisp clean backdrop
           });
           setIsReady(true);
         }

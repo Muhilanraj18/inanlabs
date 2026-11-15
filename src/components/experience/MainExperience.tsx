@@ -48,17 +48,24 @@ function MainContent() {
   useEffect(() => {
     const isReady = loaderStage === "transitioning" || loaderStage === "background";
     if (isReady) {
-      gsap.to([navbarRef.current, mainRef.current], {
+      gsap.to(navbarRef.current, {
         opacity: 1,
         y: 0,
-        duration: 0.9,
-        ease: "power3.out",
-        stagger: 0.08,
+        duration: 0.8,
+        ease: "power2.out",
+      });
+      gsap.to(mainRef.current, {
+        opacity: 1,
+        duration: 0.8,
+        ease: "power2.out",
       });
     } else {
-      gsap.set([navbarRef.current, mainRef.current], {
+      gsap.set(navbarRef.current, {
         opacity: 0,
-        y: 24,
+        y: -16,
+      });
+      gsap.set(mainRef.current, {
+        opacity: 0,
       });
     }
   }, [loaderStage]);
@@ -78,19 +85,6 @@ function MainContent() {
       <div ref={navbarRef} className="relative z-50 transition-opacity">
         <Navbar />
       </div>
-
-      {/* ── 06. REPLAY 3D INTRO FLOATING TRIGGER (GLASS SURFACE) ── */}
-      {loaderStage === "background" && (
-        <div className="fixed bottom-6 right-6 z-30">
-          <button
-            onClick={replayLoader}
-            className="px-4 py-2 rounded-full backdrop-blur-xl bg-black/80 border border-[#ccff00]/40 hover:border-[#ccff00] text-[#ccff00] font-sans text-xs uppercase tracking-wider font-bold flex items-center gap-2 shadow-[0_0_20px_rgba(204,255,0,0.2)] transition-all duration-300 cursor-pointer group"
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#ccff00] animate-pulse" />
-            <span>REPLAY 3D INTRO</span>
-          </button>
-        </div>
-      )}
 
       {/* ── 07. CONTINUOUS SCROLL-DRIVEN CONTENT CHAPTERS (Z-10) ── */}
       <main ref={mainRef} className="relative z-10 flex flex-col transition-opacity">

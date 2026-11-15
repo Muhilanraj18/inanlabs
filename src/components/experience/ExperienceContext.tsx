@@ -12,6 +12,7 @@ interface ExperienceContextType {
   setLoaderStage: (stage: LoaderStage) => void;
   setLoaderProgress: (progress: number) => void;
   setScrollProgress: (progress: number) => void;
+  setIsLoaded: (loaded: boolean) => void;
   skipLoader: () => void;
   replayLoader: () => void;
 }
@@ -39,29 +40,14 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
     setLoaderProgress(0);
     setLoaderStage("loading");
 
-    // Smooth 2.2s progression from 0 to 100% so the loader and 7 vertical bars are clearly experienced
-    const startTime = Date.now();
-    const duration = 2200; // ms
-
-    intervalRef.current = setInterval(() => {
-      const elapsed = Date.now() - startTime;
-      const progress = Math.min(100, Math.round((elapsed / duration) * 100));
-      setLoaderProgress(progress);
-
-      if (progress >= 100) {
-        if (intervalRef.current) clearInterval(intervalRef.current);
-        setLoaderStage("assembled");
-
-        // Transition: 7 vertical bars slide upwards
-        timeout1Ref.current = setTimeout(() => {
-          setLoaderStage("transitioning");
-          timeout2Ref.current = setTimeout(() => {
-            setLoaderStage("background");
-            setIsLoaded(true);
-          }, 1600);
-        }, 320);
-      }
-    }, 20);
+    // Brief initial tick for DOM and canvas mount, then begin the 7 vertical rectangles upward sequence
+    timeout1Ref.current = setTimeout(() => {
+      setLoaderStage("transitioning");
+      timeout2Ref.current = setTimeout(() => {
+        setLoaderStage("background");
+        setIsLoaded(true);
+      }, 2200);
+    }, 120);
   }, [clearAllTimers]);
 
   useEffect(() => {
@@ -98,6 +84,7 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
         setLoaderStage,
         setLoaderProgress,
         setScrollProgress,
+        setIsLoaded,
         skipLoader,
         replayLoader,
       }}

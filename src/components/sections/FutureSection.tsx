@@ -18,26 +18,26 @@ export function FutureSection() {
           {/* Left Column: Vision Statement */}
           <div className="lg:col-span-7 flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <span className="font-sans text-xs tracking-widest text-[#BCECE2] uppercase font-bold">
+              <span className="font-sans text-xs tracking-widest text-[#51E2F5] uppercase font-bold">
                 Future
               </span>
-              <span className="h-px w-10 bg-[#BCECE2]/50" />
-              <span className="text-xs font-sans text-[#a1a1aa] uppercase font-semibold">
+              <span className="h-px w-10 bg-[#51E2F5]/50" />
+              <span className="text-xs font-sans text-white/70 uppercase font-semibold">
                 A Future in Progress
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] text-foreground">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] text-foreground drop-shadow-md">
               The best part is{" "}
-              <span className="text-[#BCECE2] font-black">what comes next.</span>
+              <span className="text-[#51E2F5] font-black">what comes next.</span>
             </h2>
 
-            <p className="text-lg sm:text-xl text-[#a1a1aa] font-medium leading-relaxed max-w-2xl">
+            <p className="text-lg sm:text-xl text-white/90 font-medium leading-relaxed max-w-2xl drop-shadow-sm">
               We're building the foundations for ideas that can become useful,
               thoughtful, and lasting digital products.
             </p>
 
-            <p className="text-base text-white/70 font-normal leading-relaxed max-w-2xl">
+            <p className="text-base text-white/80 font-normal leading-relaxed max-w-2xl">
               As an independent laboratory, our roadmap is shaped not by artificial
               hype cycles, but by the relentless pursuit of solutions to stubborn
               technical problems. We invest in research that compounds over decades.
@@ -45,58 +45,58 @@ export function FutureSection() {
 
             <div className="pt-4">
               <button
-                className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-[#348D9F] hover:bg-[#066680] text-white font-sans text-xs tracking-widest uppercase font-bold shadow-[0_0_24px_rgba(52,141,159,0.3)] transition-all duration-300 cursor-pointer group"
+                className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-[#51E2F5] hover:bg-[#9DF9EF] text-black font-sans text-xs tracking-widest uppercase font-bold shadow-[0_0_24px_rgba(81,226,245,0.3)] transition-all duration-300 cursor-pointer group"
                 onClick={() => scrollTo("#contact", -80)}
               >
                 <span>Collaborate with us</span>
-                <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 text-black transition-transform group-hover:translate-x-1" />
               </button>
             </div>
           </div>
 
           {/* Right Column: Directional Frontiers */}
           <div className="lg:col-span-5 flex flex-col gap-4">
-            <div className="p-6 rounded-2xl border border-white/10 bg-[#05113A]/70 backdrop-blur-xl shadow-lg">
+            <div className="p-6 rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl shadow-lg">
               <div className="flex items-center gap-3 mb-2">
-                <span className="w-2 h-2 rounded-full bg-[#BCECE2]" />
-                <span className="font-sans text-xs text-[#BCECE2] uppercase font-bold">
+                <span className="w-2 h-2 rounded-full bg-[#51E2F5]" />
+                <span className="font-sans text-xs text-[#51E2F5] uppercase font-bold">
                   FRONTIER // 01
                 </span>
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-1">
+              <h3 className="text-lg font-bold text-white mb-1">
                 Deterministic Autonomous Synthesis
               </h3>
-              <p className="text-xs text-[#a1a1aa] leading-relaxed font-normal">
+              <p className="text-xs text-white/80 leading-relaxed font-normal">
                 Advancing mathematical safeguards and bounded verification for multi-agent workflows.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl border border-white/10 bg-[#05113A]/70 backdrop-blur-xl shadow-lg">
+            <div className="p-6 rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl shadow-lg">
               <div className="flex items-center gap-3 mb-2">
-                <span className="w-2 h-2 rounded-full bg-[#BCECE2]" />
-                <span className="font-sans text-xs text-[#BCECE2] uppercase font-bold">
+                <span className="w-2 h-2 rounded-full bg-[#51E2F5]" />
+                <span className="font-sans text-xs text-[#51E2F5] uppercase font-bold">
                   FRONTIER // 02
                 </span>
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-1">
+              <h3 className="text-lg font-bold text-white mb-1">
                 Zero-Trust Local State Gossip
               </h3>
-              <p className="text-xs text-[#a1a1aa] leading-relaxed font-normal">
+              <p className="text-xs text-white/80 leading-relaxed font-normal">
                 Decentralized CRDT consensus primitives operating across edge runtimes without centralized cloud dependency.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl border border-white/10 bg-[#05113A]/70 backdrop-blur-xl shadow-lg">
+            <div className="p-6 rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl shadow-lg">
               <div className="flex items-center gap-3 mb-2">
-                <span className="w-2 h-2 rounded-full bg-[#BCECE2]" />
-                <span className="font-sans text-xs text-[#BCECE2] uppercase font-bold">
+                <span className="w-2 h-2 rounded-full bg-[#51E2F5]" />
+                <span className="font-sans text-xs text-[#51E2F5] uppercase font-bold">
                   FRONTIER // 03
                 </span>
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-1">
+              <h3 className="text-lg font-bold text-white mb-1">
                 High-Precision Spatial Computing
               </h3>
-              <p className="text-xs text-[#a1a1aa] leading-relaxed font-normal">
+              <p className="text-xs text-white/80 leading-relaxed font-normal">
                 WebGPU procedural spatial generation pipelines engineered for real-time mathematical simulation.
               </p>
             </div>

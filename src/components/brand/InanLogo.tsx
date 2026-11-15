@@ -19,10 +19,10 @@ export function InanLogo({
   href = "",
   priority = false,
 }: InanLogoProps) {
-  // Clean logo aspect ratio: 1970 x 328 (~ 6.006 : 1)
-  const fullWidth = Math.round(height * 6.006);
-  // Mark-only aspect ratio: 640 x 370 (~ 1.73 : 1)
-  const markWidth = Math.round(height * 1.73);
+  // Brand logo aspect ratio: 2048 x 682 (~ 3.003 : 1)
+  const fullWidth = Math.round(height * 3.003);
+  // Brand mark-only aspect ratio: 656 x 365 (~ 1.797 : 1)
+  const markWidth = Math.round(height * 1.797);
 
   const logoContent = (
     <div
@@ -34,9 +34,13 @@ export function InanLogo({
       aria-label="INAN LABS Logo"
     >
       <img
-        src={markOnly ? "/brand/inan-mark-clean.png" : "/brand/inan-logo-clean.png"}
+        src={markOnly ? "/brand/inan_labs_symbol_transparent.png" : "/brand/inan_labs_transparent.png"}
         alt="INAN LABS"
-        className="h-full w-auto object-contain block"
+        className={`h-full w-auto object-contain block transition-transform group-hover:scale-105 ${
+          markOnly
+            ? "drop-shadow-[0_0_1.5px_rgba(255,255,255,0.85)]"
+            : "drop-shadow-[0_1px_3px_rgba(0,0,0,0.35)]"
+        }`}
         style={{
           height: `${height}px`,
           backgroundColor: "transparent",

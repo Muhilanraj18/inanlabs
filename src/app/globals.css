@@ -12,17 +12,15 @@
   --font-mono: var(--font-mono);
   --font-heading: var(--font-sans);
   
-  --color-brand-plum: #684554;
-  --color-brand-rose: #915b5f;
-  --color-brand-peach: #e9bfa8;
-  --color-brand-mint: #bcece2;
-  --color-brand-teal: #348d9f;
-  --color-brand-ocean: #066680;
-  --color-brand-navy: #05113a;
-
+  --color-brand-aqua: #51e2f5;
+  --color-brand-mint: #9df9ef;
+  --color-brand-dusty-white: #edf7f6;
+  --color-brand-pink-sand: #ffa8b6;
+  --color-brand-dark-sand: #a28089;
+  
   --color-brand-lime: #ccff00;
   --color-brand-red: #ff0022;
-  --color-brand-black: #05113a;
+  --color-brand-black: #0c0e18;
   --color-brand-white: #ffffff;
   
   --color-border: var(--border);
@@ -53,101 +51,95 @@
   --font-mono: "Rethink Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color-scheme: dark;
   
-  /* ── 7-COLOR ETHEREAL FLOW PALETTE ── */
-  /* 1: #684554 · 2: #915B5F · 3: #E9BFA8 · 4: #BCECE2 · 5: #348D9F · 6: #066680 · 7: #05113A */
-  --brand-plum: #684554;
-  --brand-rose: #915b5f;
-  --brand-peach: #e9bfa8;
-  --brand-mint: #bcece2;
-  --brand-teal: #348d9f;
-  --brand-ocean: #066680;
-  --brand-navy: #05113a;
+  /* ── 5-COLOR MINIMAL PALETTE (BY DUMMA BRANDING) ── */
+  /* #51E2F5 (Bright Aqua) · #9DF9EF (Mint) · #EDF7F6 (Dusty White) · #FFA8B6 (Pink Sand) · #A28089 (Dark Sand) */
+  --brand-aqua: #51e2f5;
+  --brand-mint: #9df9ef;
+  --brand-dusty-white: #edf7f6;
+  --brand-pink-sand: #ffa8b6;
+  --brand-dark-sand: #a28089;
   --brand-lime: #ccff00;
 
-  --background: #05113a;
-  --foreground: #f4faf9;
-  --card: rgba(5, 17, 58, 0.65);
-  --card-foreground: #f4faf9;
-  --popover: rgba(5, 17, 58, 0.85);
-  --popover-foreground: #f4faf9;
-  --primary: #348d9f;
-  --primary-foreground: #ffffff;
-  --secondary: #e9bfa8;
-  --secondary-foreground: #05113a;
-  --muted: rgba(255, 255, 255, 0.12);
-  --muted-foreground: #bcece2;
-  --accent: #bcece2;
-  --accent-foreground: #05113a;
-  --destructive: #915b5f;
-  --border: rgba(188, 236, 226, 0.22);
-  --input: rgba(188, 236, 226, 0.22);
-  --ring: #348d9f;
+  --background: #a28089;
+  --foreground: #ffffff;
+  --card: rgba(20, 16, 28, 0.75);
+  --card-foreground: #ffffff;
+  --popover: rgba(20, 16, 28, 0.90);
+  --popover-foreground: #ffffff;
+  --primary: #51e2f5;
+  --primary-foreground: #000000;
+  --secondary: #ffa8b6;
+  --secondary-foreground: #000000;
+  --muted: rgba(255, 255, 255, 0.15);
+  --muted-foreground: #9df9ef;
+  --accent: #9df9ef;
+  --accent-foreground: #000000;
+  --destructive: #ffa8b6;
+  --border: rgba(255, 255, 255, 0.22);
+  --input: rgba(255, 255, 255, 0.22);
+  --ring: #51e2f5;
   --radius: 0.35rem;
-  --grid-line: rgba(188, 236, 226, 0.08);
+  --grid-line: rgba(255, 255, 255, 0.08);
 }
 
 .dark {
   color-scheme: dark;
-  --brand-plum: #684554;
-  --brand-rose: #915b5f;
-  --brand-peach: #e9bfa8;
-  --brand-mint: #bcece2;
-  --brand-teal: #348d9f;
-  --brand-ocean: #066680;
-  --brand-navy: #05113a;
+  --brand-aqua: #51e2f5;
+  --brand-mint: #9df9ef;
+  --brand-dusty-white: #edf7f6;
+  --brand-pink-sand: #ffa8b6;
+  --brand-dark-sand: #a28089;
   --brand-lime: #ccff00;
 
-  --background: #05113a;
-  --foreground: #f4faf9;
-  --card: rgba(5, 17, 58, 0.65);
-  --card-foreground: #f4faf9;
-  --popover: rgba(5, 17, 58, 0.85);
-  --popover-foreground: #f4faf9;
-  --primary: #348d9f;
-  --primary-foreground: #ffffff;
-  --secondary: #e9bfa8;
-  --secondary-foreground: #05113a;
-  --muted: rgba(255, 255, 255, 0.12);
-  --muted-foreground: #bcece2;
-  --accent: #bcece2;
-  --accent-foreground: #05113a;
-  --destructive: #915b5f;
-  --border: rgba(188, 236, 226, 0.22);
-  --input: rgba(188, 236, 226, 0.22);
-  --ring: #348d9f;
-  --grid-line: rgba(188, 236, 226, 0.08);
+  --background: #a28089;
+  --foreground: #ffffff;
+  --card: rgba(20, 16, 28, 0.75);
+  --card-foreground: #ffffff;
+  --popover: rgba(20, 16, 28, 0.90);
+  --popover-foreground: #ffffff;
+  --primary: #51e2f5;
+  --primary-foreground: #000000;
+  --secondary: #ffa8b6;
+  --secondary-foreground: #000000;
+  --muted: rgba(255, 255, 255, 0.15);
+  --muted-foreground: #9df9ef;
+  --accent: #9df9ef;
+  --accent-foreground: #000000;
+  --destructive: #ffa8b6;
+  --border: rgba(255, 255, 255, 0.22);
+  --input: rgba(255, 255, 255, 0.22);
+  --ring: #51e2f5;
+  --grid-line: rgba(255, 255, 255, 0.08);
 }
 
 .light {
   color-scheme: dark;
-  --brand-plum: #684554;
-  --brand-rose: #915b5f;
-  --brand-peach: #e9bfa8;
-  --brand-mint: #bcece2;
-  --brand-teal: #348d9f;
-  --brand-ocean: #066680;
-  --brand-navy: #05113a;
+  --brand-aqua: #51e2f5;
+  --brand-mint: #9df9ef;
+  --brand-dusty-white: #edf7f6;
+  --brand-pink-sand: #ffa8b6;
+  --brand-dark-sand: #a28089;
   --brand-lime: #ccff00;
 
-  --background: #05113a;
-  --foreground: #f4faf9;
-  --card: rgba(5, 17, 58, 0.65);
-  --card-foreground: #f4faf9;
-  --popover: rgba(5, 17, 58, 0.85);
-  --popover-foreground: #f4faf9;
-  --primary: #348d9f;
-  --primary-foreground: #ffffff;
-  --secondary: #e9bfa8;
-  --secondary-foreground: #05113a;
-  --muted: rgba(255, 255, 255, 0.12);
-  --muted-foreground: #bcece2;
-  --accent: #bcece2;
-  --accent-foreground: #05113a;
-  --destructive: #915b5f;
-  --border: rgba(188, 236, 226, 0.22);
-  --input: rgba(188, 236, 226, 0.22);
-  --ring: #348d9f;
-  --grid-line: rgba(188, 236, 226, 0.08);
+  --background: #a28089;
+  --foreground: #ffffff;
+  --card: rgba(20, 16, 28, 0.75);
+  --card-foreground: #ffffff;
+  --popover: rgba(20, 16, 28, 0.90);
+  --popover-foreground: #ffffff;
+  --primary: #51e2f5;
+  --primary-foreground: #000000;
+  --secondary: #ffa8b6;
+  --secondary-foreground: #000000;
+  --muted: rgba(255, 255, 255, 0.15);
+  --muted-foreground: #9df9ef;
+  --accent: #9df9ef;
+  --accent-foreground: #000000;
+  --destructive: #ffa8b6;
+  --border: rgba(255, 255, 255, 0.22);
+  --input: rgba(255, 255, 255, 0.22);
+  --ring: #51e2f5;
+  --grid-line: rgba(255, 255, 255, 0.08);
 }
 
 @layer base {
@@ -157,8 +149,8 @@
   html {
     scroll-behavior: auto;
     overflow-x: hidden;
-    background: linear-gradient(180deg, #05113a 0%, #066680 20%, #348d9f 42%, #066680 64%, #684554 85%, #05113a 100%) fixed;
-    color: #f4faf9;
+    background: linear-gradient(180deg, #51e2f5 0%, #9df9ef 22%, #edf7f6 45%, #ffa8b6 72%, #a28089 100%) fixed;
+    color: #ffffff;
     font-family: var(--font-sans);
   }
   body {
@@ -166,8 +158,8 @@
     font-family: var(--font-sans);
     font-feature-settings: "rlig" 1, "calt" 1;
     overflow-x: hidden;
-    background: linear-gradient(180deg, #05113a 0%, #066680 20%, #348d9f 42%, #066680 64%, #684554 85%, #05113a 100%) fixed;
-    color: #f4faf9;
+    background: linear-gradient(180deg, #51e2f5 0%, #9df9ef 22%, #edf7f6 45%, #ffa8b6 72%, #a28089 100%) fixed;
+    color: #ffffff;
     font-weight: 500;
   }
   h1, h2, h3, h4, h5, h6 {

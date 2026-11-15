@@ -52,47 +52,47 @@ export function EngineeringSection() {
           {/* Section Header */}
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
-              <span className="font-sans text-xs tracking-widest text-[#BCECE2] uppercase font-bold">
+              <span className="font-sans text-xs tracking-widest text-[#51e2f5] uppercase font-bold">
                 Engineering
               </span>
-              <span className="h-px w-10 bg-[#BCECE2]/50" />
-              <span className="text-xs font-sans text-[#a1a1aa] uppercase font-semibold">
+              <span className="h-px w-10 bg-[#51e2f5]/50" />
+              <span className="text-xs font-sans text-white/70 uppercase font-semibold">
                 Turning Ideas into Systems
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] mb-6 text-foreground">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] mb-6 text-foreground drop-shadow-md">
               From possibility to{" "}
-              <span className="text-[#BCECE2] font-black">something real.</span>
+              <span className="text-[#51e2f5] font-black">something real.</span>
             </h2>
 
-            <p className="text-lg sm:text-xl text-[#a1a1aa] font-medium leading-relaxed">
+            <p className="text-lg sm:text-xl text-white/90 font-medium leading-relaxed drop-shadow-sm">
               Good engineering turns promising ideas into coherent systems through
               careful design, implementation, iteration, and testing.
             </p>
           </div>
 
           {/* Structured Engineering Process */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 border-t border-white/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 border-t border-white/20">
             {PRINCIPLES.map((p) => (
               <div
                 key={p.step}
-                className="py-4 border-l border-[#BCECE2]/30 pl-5 flex flex-col justify-between group hover:border-[#BCECE2] transition-colors"
+                className="p-5 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 flex flex-col justify-between group hover:border-[#51e2f5] transition-all"
               >
                 <div>
-                  <div className="flex items-center justify-between font-sans text-xs mb-4 text-[#a1a1aa]">
-                    <span className="text-[#BCECE2] font-bold">[{p.step}]</span>
+                  <div className="flex items-center justify-between font-sans text-xs mb-4 text-white/70">
+                    <span className="text-[#51e2f5] font-bold">[{p.step}]</span>
                     <span className="font-semibold">PHASE</span>
                   </div>
-                  <h3 className="text-lg font-bold mb-2 text-foreground group-hover:text-[#BCECE2] transition-colors">
+                  <h3 className="text-lg font-bold mb-2 text-white group-hover:text-[#51e2f5] transition-colors">
                     {p.title}
                   </h3>
-                  <p className="text-sm text-[#a1a1aa] leading-relaxed font-normal">
+                  <p className="text-sm text-white/80 leading-relaxed font-normal">
                     {p.description}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-3 border-t border-white/10 font-sans text-[11px] text-[#BCECE2]/75 tracking-wider font-semibold">
+                <div className="mt-6 pt-3 border-t border-white/10 font-sans text-[11px] text-[#51e2f5] tracking-wider font-semibold">
                   {p.artifact}
                 </div>
               </div>

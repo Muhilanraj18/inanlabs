@@ -70,11 +70,11 @@ export function DriftingCloudsThroughLogo({ scrollProgress }: DriftingCloudsThro
     uniform float uPhase;
     uniform float uBaseOpacity;
 
-    // Vanta Clouds palette
-    uniform vec3 uSunColor;       // Warm sunlight highlight (#ffa933)
+    // Original Daytime Vanta Clouds palette
+    uniform vec3 uSunColor;       // Warm golden sunlight rays (#ffa933)
     uniform vec3 uCloudColor;     // Silvery white cloud body (#f0f6ff)
     uniform vec3 uShadowColor;    // Soft atmospheric shadow (#adc1de)
-    uniform vec3 uSkyAmbient;     // Ambient blue sky tint (#68b8d7)
+    uniform vec3 uSkyAmbient;     // Daytime blue sky tint (#68b8d7)
 
     varying vec2 vUv;
     varying vec3 vWorldPosition;
@@ -124,11 +124,11 @@ export function DriftingCloudsThroughLogo({ scrollProgress }: DriftingCloudsThro
       float density = clamp(radialMask * (n * 1.55 - 0.15), 0.0, 1.0);
       if (density < 0.02) discard;
 
-      // Lighting matching Vanta Clouds:
+      // Lighting matching Daytime Vanta Clouds:
       // Sunlight direction from top-left front
       float sunScatter = clamp(0.5 + 0.5 * (p.x * -0.6 - p.y * 0.7), 0.0, 1.0);
       
-      // Color grading
+      // Color grading for Daytime clouds
       vec3 col = mix(uShadowColor, uCloudColor, sunScatter * 0.7 + 0.3);
       col = mix(col, uSunColor, pow(sunScatter, 3.2) * 0.45);
       col = mix(col, uSkyAmbient, (1.0 - density) * 0.25);
@@ -140,7 +140,7 @@ export function DriftingCloudsThroughLogo({ scrollProgress }: DriftingCloudsThro
     }
   `;
 
-  // Pre-create uniforms for each cloud quad
+  // Pre-create uniforms for each cloud quad with Daytime palette
   const uniformsList = useMemo(() => {
     return cloudData.map((d) => ({
       uTime: { value: 0 },
