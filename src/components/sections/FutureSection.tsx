@@ -18,26 +18,26 @@ export function FutureSection() {
           {/* Left Column: Vision Statement */}
           <div className="lg:col-span-7 flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <span className="font-sans text-xs tracking-widest text-[#51E2F5] uppercase font-bold">
+              <span className="font-sans text-xs tracking-widest text-[#066680] uppercase font-bold">
                 Future
               </span>
-              <span className="h-px w-10 bg-[#51E2F5]/50" />
-              <span className="text-xs font-sans text-white/70 uppercase font-semibold">
+              <span className="h-px w-10 bg-[#066680]/40" />
+              <span className="text-xs font-sans text-[#2d3139] uppercase font-semibold">
                 A Future in Progress
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] text-foreground drop-shadow-md">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] text-[#090a10]">
               The best part is{" "}
-              <span className="text-[#51E2F5] font-black">what comes next.</span>
+              <span className="text-[#066680] font-black">what comes next.</span>
             </h2>
 
-            <p className="text-lg sm:text-xl text-white/90 font-medium leading-relaxed max-w-2xl drop-shadow-sm">
+            <p className="text-lg sm:text-xl text-[#181a24] font-medium leading-relaxed max-w-2xl">
               We're building the foundations for ideas that can become useful,
               thoughtful, and lasting digital products.
             </p>
 
-            <p className="text-base text-white/80 font-normal leading-relaxed max-w-2xl">
+            <p className="text-base text-[#2d3139] font-normal leading-relaxed max-w-2xl">
               As an independent laboratory, our roadmap is shaped not by artificial
               hype cycles, but by the relentless pursuit of solutions to stubborn
               technical problems. We invest in research that compounds over decades.
@@ -45,18 +45,18 @@ export function FutureSection() {
 
             <div className="pt-4">
               <button
-                className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-[#51E2F5] hover:bg-[#9DF9EF] text-black font-sans text-xs tracking-widest uppercase font-bold shadow-[0_0_24px_rgba(81,226,245,0.3)] transition-all duration-300 cursor-pointer group"
+                className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-[#066680] hover:bg-[#090a10] text-white font-sans text-xs tracking-widest uppercase font-bold shadow-[0_0_24px_rgba(6,102,128,0.3)] transition-all duration-300 cursor-pointer group"
                 onClick={() => scrollTo("#contact", -80)}
               >
                 <span>Collaborate with us</span>
-                <ArrowRight className="w-4 h-4 text-black transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
               </button>
             </div>
           </div>
 
           {/* Right Column: Directional Frontiers */}
           <div className="lg:col-span-5 flex flex-col gap-4">
-            <div className="p-6 rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl shadow-lg">
+            <div className="p-6 rounded-2xl border border-black/15 bg-[#0c0e18]/90 backdrop-blur-xl shadow-xl">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-2 h-2 rounded-full bg-[#51E2F5]" />
                 <span className="font-sans text-xs text-[#51E2F5] uppercase font-bold">
@@ -66,12 +66,12 @@ export function FutureSection() {
               <h3 className="text-lg font-bold text-white mb-1">
                 Deterministic Autonomous Synthesis
               </h3>
-              <p className="text-xs text-white/80 leading-relaxed font-normal">
+              <p className="text-xs text-white/85 leading-relaxed font-normal">
                 Advancing mathematical safeguards and bounded verification for multi-agent workflows.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl shadow-lg">
+            <div className="p-6 rounded-2xl border border-black/15 bg-[#0c0e18]/90 backdrop-blur-xl shadow-xl">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-2 h-2 rounded-full bg-[#51E2F5]" />
                 <span className="font-sans text-xs text-[#51E2F5] uppercase font-bold">
@@ -81,12 +81,12 @@ export function FutureSection() {
               <h3 className="text-lg font-bold text-white mb-1">
                 Zero-Trust Local State Gossip
               </h3>
-              <p className="text-xs text-white/80 leading-relaxed font-normal">
+              <p className="text-xs text-white/85 leading-relaxed font-normal">
                 Decentralized CRDT consensus primitives operating across edge runtimes without centralized cloud dependency.
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl border border-white/10 bg-black/40 backdrop-blur-xl shadow-lg">
+            <div className="p-6 rounded-2xl border border-black/15 bg-[#0c0e18]/90 backdrop-blur-xl shadow-xl">
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-2 h-2 rounded-full bg-[#51E2F5]" />
                 <span className="font-sans text-xs text-[#51E2F5] uppercase font-bold">
@@ -96,7 +96,7 @@ export function FutureSection() {
               <h3 className="text-lg font-bold text-white mb-1">
                 High-Precision Spatial Computing
               </h3>
-              <p className="text-xs text-white/80 leading-relaxed font-normal">
+              <p className="text-xs text-white/85 leading-relaxed font-normal">
                 WebGPU procedural spatial generation pipelines engineered for real-time mathematical simulation.
               </p>
             </div>

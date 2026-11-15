@@ -218,36 +218,18 @@ export function InanLogo3DModel({
     redCandyRoughness,
   ]);
 
-  // Frame Loop - Cinematic entrance upon entering hero, anchored background presence
+  // Frame Loop - Cinematic smooth presence in hero and anchored background stage
   useFrame((state, delta) => {
     if (!rootGroupRef.current) return;
 
     const time = state.clock.elapsedTime;
-    const isLoaderActive = loaderStage === "loading" || loaderStage === "assembled";
-
-    // ── 01. LOADER STATE: HIDDEN IN DEEP BACKGROUND, ONLY TITLE SHOWS ──
-    if (isLoaderActive) {
-      // Keep model staged deep in background with scale 0 while loader is running
-      rootGroupRef.current.position.x = 0;
-      rootGroupRef.current.position.y = 0;
-      rootGroupRef.current.position.z = -4.5;
-      rootGroupRef.current.scale.set(0.001, 0.001, 0.001);
-      rootGroupRef.current.rotation.set(0.12, -0.75, 0);
-
-      if (redMeshRef.current) redMeshRef.current.position.set(0, 0, 0);
-      if (blackMeshRef.current) blackMeshRef.current.position.set(0, 0, 0);
-      return;
-    }
-
-    // ── 02. ENTERING HERO / BACKGROUND STATE: MAJESTIC TRANSITION & ANCHORED STAGE ──
     const p = Math.min(Math.max(scrollProgress, 0), 1);
-    const isTransitioning = loaderStage === "transitioning";
 
     // Center lock - absolutely no left-to-right dancing
     const targetX = 0;
 
     // Organic hover breathing when in hero
-    const hoverY = isTransitioning ? 0 : Math.sin(time * 0.9) * 0.03;
+    const hoverY = Math.sin(time * 0.9) * 0.03;
     const targetY = THREE.MathUtils.lerp(0.22, 0.0, p) + hoverY;
 
     // Depth: recessed subtly in the background
@@ -284,8 +266,8 @@ export function InanLogo3DModel({
     const targetRotX = userRotation.current.x + 0.08 + pointerTiltX;
     const targetRotY = userRotation.current.y + p * Math.PI * 0.6 + pointerTiltY;
 
-    // Smooth damp factor (snappy yet majestic entrance)
-    const dampSpeed = isTransitioning ? 2.6 : isDragging.current ? 12.0 : 3.5;
+    // Smooth damp factor (consistent, silky-smooth motion with zero sudden pops)
+    const dampSpeed = isDragging.current ? 12.0 : 3.5;
 
     rootGroupRef.current.position.x = THREE.MathUtils.damp(
       rootGroupRef.current.position.x,

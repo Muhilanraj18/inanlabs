@@ -52,32 +52,32 @@ export function EngineeringSection() {
           {/* Section Header */}
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
-              <span className="font-sans text-xs tracking-widest text-[#51e2f5] uppercase font-bold">
+              <span className="font-sans text-xs tracking-widest text-[#066680] uppercase font-bold">
                 Engineering
               </span>
-              <span className="h-px w-10 bg-[#51e2f5]/50" />
-              <span className="text-xs font-sans text-white/70 uppercase font-semibold">
+              <span className="h-px w-10 bg-[#066680]/40" />
+              <span className="text-xs font-sans text-[#2d3139] uppercase font-semibold">
                 Turning Ideas into Systems
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] mb-6 text-foreground drop-shadow-md">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] mb-6 text-[#090a10]">
               From possibility to{" "}
-              <span className="text-[#51e2f5] font-black">something real.</span>
+              <span className="text-[#066680] font-black">something real.</span>
             </h2>
 
-            <p className="text-lg sm:text-xl text-white/90 font-medium leading-relaxed drop-shadow-sm">
+            <p className="text-lg sm:text-xl text-[#181a24] font-medium leading-relaxed">
               Good engineering turns promising ideas into coherent systems through
               careful design, implementation, iteration, and testing.
             </p>
           </div>
 
           {/* Structured Engineering Process */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 border-t border-white/20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 border-t border-black/15">
             {PRINCIPLES.map((p) => (
               <div
                 key={p.step}
-                className="p-5 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 flex flex-col justify-between group hover:border-[#51e2f5] transition-all"
+                className="p-6 rounded-2xl bg-[#0c0e18]/90 backdrop-blur-xl border border-black/15 shadow-xl flex flex-col justify-between group hover:border-[#51e2f5] transition-all"
               >
                 <div>
                   <div className="flex items-center justify-between font-sans text-xs mb-4 text-white/70">
@@ -87,7 +87,7 @@ export function EngineeringSection() {
                   <h3 className="text-lg font-bold mb-2 text-white group-hover:text-[#51e2f5] transition-colors">
                     {p.title}
                   </h3>
-                  <p className="text-sm text-white/80 leading-relaxed font-normal">
+                  <p className="text-sm text-white/85 leading-relaxed font-normal">
                     {p.description}
                   </p>
                 </div>

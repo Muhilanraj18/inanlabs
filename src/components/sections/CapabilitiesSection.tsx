@@ -61,20 +61,20 @@ export function CapabilitiesSection() {
           {/* Section Header */}
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
-              <span className="font-sans text-xs tracking-widest text-[#51E2F5] uppercase font-bold">
+              <span className="font-sans text-xs tracking-widest text-[#066680] uppercase font-bold">
                 Services & Capabilities
               </span>
-              <span className="h-px w-10 bg-[#51E2F5]/50" />
-              <span className="text-xs font-sans text-white/70 uppercase tracking-wider font-semibold">
+              <span className="h-px w-10 bg-[#066680]/40" />
+              <span className="text-xs font-sans text-[#2d3139] uppercase tracking-wider font-semibold">
                 Engineering Disciplines
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] mb-6 text-foreground drop-shadow-md">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] mb-6 text-[#090a10]">
               Disciplines engineered for the future.
             </h2>
 
-            <p className="text-lg sm:text-xl text-white/90 font-medium leading-relaxed drop-shadow-sm">
+            <p className="text-lg sm:text-xl text-[#181a24] font-medium leading-relaxed">
               Our work spans core distributed systems, intelligent agent architectures, and ergonomic developer
               platforms—engineered with mathematical restraint and uncompromising craft.
             </p>
@@ -90,7 +90,7 @@ export function CapabilitiesSection() {
                 aria-label={`View confidential details for ${cap.title}`}
               >
                 <div
-                  className="p-7 flex flex-col justify-between h-full min-h-[260px] rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 group-hover:border-[#51E2F5]/60 group-hover:shadow-[0_8px_32px_rgba(81,226,245,0.2)] transition-all duration-300"
+                  className="p-7 flex flex-col justify-between h-full min-h-[260px] rounded-2xl bg-[#0c0e18]/90 backdrop-blur-xl border border-black/15 shadow-xl group-hover:border-[#51E2F5]/60 group-hover:shadow-[0_8px_32px_rgba(81,226,245,0.2)] transition-all duration-300"
                 >
                   {/* Top row */}
                   <div>

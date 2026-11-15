@@ -17,27 +17,27 @@ export function Footer() {
           <div className="lg:col-span-5 flex flex-col gap-6">
             <InanLogo height={42} markOnly={false} href="" />
 
-            <p className="text-sm text-[#a1a1aa] font-normal leading-relaxed max-w-sm">
+            <p className="text-sm text-[#181a24] font-medium leading-relaxed max-w-sm">
               An independent technology company exploring possibilities,
               engineering solutions, and turning meaningful ideas into digital products.
             </p>
 
-            <div className="flex items-center gap-2 font-sans text-xs text-[#51E2F5] font-semibold">
-              <span className="w-2 h-2 rounded-full bg-[#51E2F5] animate-pulse" />
+            <div className="flex items-center gap-2 font-sans text-xs text-[#066680] font-bold">
+              <span className="w-2 h-2 rounded-full bg-[#066680] animate-pulse" />
               <span>INAN CORE CLUSTER // ONLINE</span>
             </div>
           </div>
 
           {/* Navigation Links Column */}
           <div className="lg:col-span-3 flex flex-col gap-4 font-sans">
-            <span className="text-xs uppercase tracking-wider text-[#51E2F5] font-bold">
+            <span className="text-xs uppercase tracking-wider text-[#066680] font-bold">
               NAVIGATION
             </span>
-            <ul className="flex flex-col gap-2.5 text-sm font-medium">
+            <ul className="flex flex-col gap-2.5 text-sm font-semibold">
               <li>
                 <button
                   onClick={() => scrollTo("#hero")}
-                  className="text-white/70 hover:text-[#51E2F5] transition-colors cursor-pointer text-left"
+                  className="text-[#181a24] hover:text-[#066680] transition-colors cursor-pointer text-left"
                 >
                   Hero Stage
                 </button>
@@ -45,7 +45,7 @@ export function Footer() {
               <li>
                 <button
                   onClick={() => scrollTo("#origin")}
-                  className="text-white/70 hover:text-[#51E2F5] transition-colors cursor-pointer text-left"
+                  className="text-[#181a24] hover:text-[#066680] transition-colors cursor-pointer text-left"
                 >
                   About & Origin
                 </button>
@@ -53,7 +53,7 @@ export function Footer() {
               <li>
                 <button
                   onClick={() => scrollTo("#engineering")}
-                  className="text-white/70 hover:text-[#51E2F5] transition-colors cursor-pointer text-left"
+                  className="text-[#181a24] hover:text-[#066680] transition-colors cursor-pointer text-left"
                 >
                   Engineering Standards
                 </button>
@@ -61,7 +61,7 @@ export function Footer() {
               <li>
                 <button
                   onClick={() => scrollTo("#capabilities")}
-                  className="text-white/70 hover:text-[#51E2F5] transition-colors cursor-pointer text-left"
+                  className="text-[#181a24] hover:text-[#066680] transition-colors cursor-pointer text-left"
                 >
                   Services & Capabilities
                 </button>
@@ -69,7 +69,7 @@ export function Footer() {
               <li>
                 <button
                   onClick={() => scrollTo("#future")}
-                  className="text-white/70 hover:text-[#51E2F5] transition-colors cursor-pointer text-left"
+                  className="text-[#181a24] hover:text-[#066680] transition-colors cursor-pointer text-left"
                 >
                   Vision & Future
                 </button>
@@ -77,7 +77,7 @@ export function Footer() {
               <li>
                 <button
                   onClick={() => scrollTo("#contact")}
-                  className="text-white/70 hover:text-[#51E2F5] transition-colors cursor-pointer text-left"
+                  className="text-[#181a24] hover:text-[#066680] transition-colors cursor-pointer text-left"
                 >
                   Contact & Inquiries
                 </button>
@@ -87,20 +87,20 @@ export function Footer() {
 
           {/* Confidential Architecture Column */}
           <div className="lg:col-span-4 flex flex-col gap-4 font-sans">
-            <span className="text-xs uppercase tracking-wider text-[#51E2F5] font-bold flex items-center gap-1.5">
-              <Lock className="w-3.5 h-3.5 text-[#51E2F5]" />
+            <span className="text-xs uppercase tracking-wider text-[#066680] font-bold flex items-center gap-1.5">
+              <Lock className="w-3.5 h-3.5 text-[#066680]" />
               CONFIDENTIAL PROTOCOLS
             </span>
             <div className="flex flex-col gap-3 text-xs text-foreground/80 font-normal">
-              <div className="p-3.5 rounded-xl bg-black/40 backdrop-blur-md border border-white/10 shadow-sm flex flex-col gap-1">
+              <div className="p-4 rounded-xl bg-[#0c0e18]/90 backdrop-blur-md border border-black/15 shadow-xl flex flex-col gap-1">
                 <span className="text-white font-bold">ZERO EXTERNAL LEAKAGE</span>
-                <p className="text-[12px] text-white/70 leading-relaxed">
+                <p className="text-[12px] text-white/80 leading-relaxed">
                   All client systems, memory structures, and model weights operate in isolated, cryptographically bounded enclaves.
                 </p>
               </div>
-              <div className="p-3.5 rounded-xl bg-black/40 backdrop-blur-md border border-white/10 shadow-sm flex flex-col gap-1">
+              <div className="p-4 rounded-xl bg-[#0c0e18]/90 backdrop-blur-md border border-black/15 shadow-xl flex flex-col gap-1">
                 <span className="text-white font-bold">FORMAL SPECIFICATIONS</span>
-                <p className="text-[12px] text-white/70 leading-relaxed">
+                <p className="text-[12px] text-white/80 leading-relaxed">
                   Architecture diagrams and concurrency invariants are validated mathematically before runtime compilation.
                 </p>
               </div>
@@ -146,7 +146,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-xs text-white/50">
+        <div className="pt-8 border-t border-black/15 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-xs text-[#181a24] font-medium">
           <div>
             <span>© 2026 INAN LABS. All rights reserved.</span>
           </div>
@@ -154,14 +154,14 @@ export function Footer() {
           <div className="flex items-center gap-6">
             <button
               onClick={() => setPrivacyModalOpen(true)}
-              className="hover:text-white transition-colors cursor-pointer"
+              className="hover:text-black transition-colors cursor-pointer"
             >
               Privacy Information
             </button>
-            <span className="text-white/20">/</span>
+            <span className="text-black/30">/</span>
             <span>Security Architecture</span>
-            <span className="text-white/20">/</span>
-            <span className="text-[#51E2F5] font-semibold">CONFIDENTIAL // v1.0.0</span>
+            <span className="text-black/30">/</span>
+            <span className="text-[#066680] font-bold">CONFIDENTIAL // v1.0.0</span>
           </div>
         </div>
       </div>

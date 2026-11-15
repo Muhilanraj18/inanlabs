@@ -12,28 +12,28 @@ export function OriginSection() {
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
           {/* Simple Section Title */}
-          <div className="lg:col-span-3 flex flex-col gap-2 border-l-2 border-[#51e2f5] pl-4">
-            <span className="font-sans text-xs tracking-widest text-[#51e2f5] uppercase font-bold">
+          <div className="lg:col-span-3 flex flex-col gap-2 border-l-2 border-[#090a10] pl-4">
+            <span className="font-sans text-xs tracking-widest text-[#066680] uppercase font-bold">
               Origin
             </span>
-            <span className="text-xs font-sans text-white/70 uppercase tracking-wider font-semibold">
+            <span className="text-xs font-sans text-[#2d3139] uppercase tracking-wider font-semibold">
               From an idea to a possibility
             </span>
           </div>
 
           {/* Core Editorial Copy */}
           <div className="lg:col-span-9 max-w-3xl">
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] mb-8 text-foreground drop-shadow-md">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] mb-8 text-[#090a10]">
               Every meaningful product begins with a question.
             </h2>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-medium leading-relaxed mb-12 drop-shadow-sm">
+            <p className="text-lg sm:text-xl md:text-2xl text-[#181a24] font-medium leading-relaxed mb-12">
               We believe useful technology starts with understanding a problem,
               exploring possibilities, and finding a thoughtful way forward.
             </p>
 
             {/* Three Foundational Pillars */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-white/20">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-black/15">
               {[
                 {
                   num: "01",
@@ -56,13 +56,13 @@ export function OriginSection() {
               ].map((item) => (
                 <div
                   key={item.num}
-                  className="flex flex-col gap-3 py-3 px-4 rounded-xl bg-black/40 backdrop-blur-md border border-white/10 group hover:border-[#51e2f5] transition-all"
+                  className="flex flex-col gap-3 py-5 px-5 rounded-2xl bg-[#0c0e18]/90 backdrop-blur-xl border border-black/15 shadow-xl group hover:border-[#51e2f5] transition-all"
                 >
                   <span className="font-sans text-xs text-[#51e2f5] font-bold">
                     [ {item.num} / {item.label} ]
                   </span>
                   <h3 className="text-lg font-bold text-white group-hover:text-[#51e2f5] transition-colors">{item.title}</h3>
-                  <p className="text-sm text-white/80 leading-relaxed font-normal">{item.desc}</p>
+                  <p className="text-sm text-white/85 leading-relaxed font-normal">{item.desc}</p>
                 </div>
               ))}
             </div>
