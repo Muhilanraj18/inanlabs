@@ -1,26 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *, .dark, .dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-heading: var(--font-sans);
+  
+  --color-brand-plum: #684554;
+  --color-brand-rose: #915b5f;
+  --color-brand-peach: #e9bfa8;
+  --color-brand-mint: #bcece2;
+  --color-brand-teal: #348d9f;
+  --color-brand-ocean: #066680;
+  --color-brand-navy: #05113a;
+
+  --color-brand-lime: #ccff00;
+  --color-brand-red: #ff0022;
+  --color-brand-black: #05113a;
+  --color-brand-white: #ffffff;
+  
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --font-sans: "Rethink Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Rethink Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: dark;
+  
+  /* ── 7-COLOR ETHEREAL FLOW PALETTE ── */
+  /* 1: #684554 · 2: #915B5F · 3: #E9BFA8 · 4: #BCECE2 · 5: #348D9F · 6: #066680 · 7: #05113A */
+  --brand-plum: #684554;
+  --brand-rose: #915b5f;
+  --brand-peach: #e9bfa8;
+  --brand-mint: #bcece2;
+  --brand-teal: #348d9f;
+  --brand-ocean: #066680;
+  --brand-navy: #05113a;
+  --brand-lime: #ccff00;
+
+  --background: #05113a;
+  --foreground: #f4faf9;
+  --card: rgba(5, 17, 58, 0.65);
+  --card-foreground: #f4faf9;
+  --popover: rgba(5, 17, 58, 0.85);
+  --popover-foreground: #f4faf9;
+  --primary: #348d9f;
+  --primary-foreground: #ffffff;
+  --secondary: #e9bfa8;
+  --secondary-foreground: #05113a;
+  --muted: rgba(255, 255, 255, 0.12);
+  --muted-foreground: #bcece2;
+  --accent: #bcece2;
+  --accent-foreground: #05113a;
+  --destructive: #915b5f;
+  --border: rgba(188, 236, 226, 0.22);
+  --input: rgba(188, 236, 226, 0.22);
+  --ring: #348d9f;
+  --radius: 0.35rem;
+  --grid-line: rgba(188, 236, 226, 0.08);
+}
+
+.dark {
+  color-scheme: dark;
+  --brand-plum: #684554;
+  --brand-rose: #915b5f;
+  --brand-peach: #e9bfa8;
+  --brand-mint: #bcece2;
+  --brand-teal: #348d9f;
+  --brand-ocean: #066680;
+  --brand-navy: #05113a;
+  --brand-lime: #ccff00;
+
+  --background: #05113a;
+  --foreground: #f4faf9;
+  --card: rgba(5, 17, 58, 0.65);
+  --card-foreground: #f4faf9;
+  --popover: rgba(5, 17, 58, 0.85);
+  --popover-foreground: #f4faf9;
+  --primary: #348d9f;
+  --primary-foreground: #ffffff;
+  --secondary: #e9bfa8;
+  --secondary-foreground: #05113a;
+  --muted: rgba(255, 255, 255, 0.12);
+  --muted-foreground: #bcece2;
+  --accent: #bcece2;
+  --accent-foreground: #05113a;
+  --destructive: #915b5f;
+  --border: rgba(188, 236, 226, 0.22);
+  --input: rgba(188, 236, 226, 0.22);
+  --ring: #348d9f;
+  --grid-line: rgba(188, 236, 226, 0.08);
+}
+
+.light {
+  color-scheme: dark;
+  --brand-plum: #684554;
+  --brand-rose: #915b5f;
+  --brand-peach: #e9bfa8;
+  --brand-mint: #bcece2;
+  --brand-teal: #348d9f;
+  --brand-ocean: #066680;
+  --brand-navy: #05113a;
+  --brand-lime: #ccff00;
+
+  --background: #05113a;
+  --foreground: #f4faf9;
+  --card: rgba(5, 17, 58, 0.65);
+  --card-foreground: #f4faf9;
+  --popover: rgba(5, 17, 58, 0.85);
+  --popover-foreground: #f4faf9;
+  --primary: #348d9f;
+  --primary-foreground: #ffffff;
+  --secondary: #e9bfa8;
+  --secondary-foreground: #05113a;
+  --muted: rgba(255, 255, 255, 0.12);
+  --muted-foreground: #bcece2;
+  --accent: #bcece2;
+  --accent-foreground: #05113a;
+  --destructive: #915b5f;
+  --border: rgba(188, 236, 226, 0.22);
+  --input: rgba(188, 236, 226, 0.22);
+  --ring: #348d9f;
+  --grid-line: rgba(188, 236, 226, 0.08);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: auto;
+    overflow-x: hidden;
+    background: linear-gradient(180deg, #05113a 0%, #066680 20%, #348d9f 42%, #066680 64%, #684554 85%, #05113a 100%) fixed;
+    color: #f4faf9;
+    font-family: var(--font-sans);
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
+    background: linear-gradient(180deg, #05113a 0%, #066680 20%, #348d9f 42%, #066680 64%, #684554 85%, #05113a 100%) fixed;
+    color: #f4faf9;
+    font-weight: 500;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+  }
+  p, span, li, a, button, label {
+    font-family: var(--font-sans);
+    font-weight: 450;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Architectural Grid & Tech Line Utilities */
+.tech-grid {
+  background-image: linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+                    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.tech-grid-dense {
+  background-image: linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+                    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* Glassmorphism tuned to 7-color palette */
+.glass-panel {
+  background: rgba(5, 17, 58, 0.58);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(188, 236, 226, 0.22);
+  box-shadow: 0 16px 40px rgba(5, 17, 58, 0.6);
+}
+
+:root:not(.dark) .glass-panel {
+  background: rgba(5, 17, 58, 0.58);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(188, 236, 226, 0.22);
+  box-shadow: 0 16px 40px rgba(5, 17, 58, 0.6);
+}
+
+/* Smooth custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #05113a;
+}
+::-webkit-scrollbar-thumb {
+  background: #348d9f;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e9bfa8;
 }
