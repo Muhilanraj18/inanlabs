@@ -30,10 +30,10 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
     gsap.registerPlugin(ScrollTrigger);
 
     const lenis = new Lenis({
-      lerp: 0.09,
-      duration: 1.1,
-      wheelMultiplier: 1.0,
-      touchMultiplier: 1.5,
+      lerp: 0.07,
+      duration: 1.4,
+      wheelMultiplier: 0.85,
+      touchMultiplier: 1.2,
       autoResize: true,
     });
 

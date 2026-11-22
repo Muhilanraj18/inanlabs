@@ -40,14 +40,14 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
     setLoaderProgress(0);
     setLoaderStage("loading");
 
-    // Brief initial tick for DOM and canvas mount, then begin the 7 vertical rectangles upward sequence
+    // Brief initial tick for DOM and canvas mount, then begin the handwriting + 7 vertical rectangles sequence
     timeout1Ref.current = setTimeout(() => {
       setLoaderStage("transitioning");
       timeout2Ref.current = setTimeout(() => {
         setLoaderStage("background");
         setIsLoaded(true);
-      }, 2200);
-    }, 120);
+      }, 3000);
+    }, 2200);
   }, [clearAllTimers]);
 
   useEffect(() => {
