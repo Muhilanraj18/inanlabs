@@ -1,5 +1,7 @@
 declare module 'vanta/dist/vanta.clouds.min.js' {
-  const CLOUDS: any;
+  interface VantaEffect {
+    destroy: () => void;
+  }
+  const CLOUDS: (options: Record<string, unknown>) => VantaEffect;
   export default CLOUDS;
 }
-

@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { Sparkles, Move3d } from "lucide-react";
 
 export function HeroSection() {
   return (

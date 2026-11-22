@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { PRODUCTS } from "@/content/products";
 import { ProductStatus } from "@/types/product";
-import { ArrowUpRight, CheckCircle, Terminal, Layers, Sparkles, Activity } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export function ProductsSection() {
   const getStatusBadge = (status: ProductStatus) => {

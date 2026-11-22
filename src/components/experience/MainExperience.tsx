@@ -20,7 +20,7 @@ function MainContent() {
   const containerRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLElement>(null);
   const navbarRef = useRef<HTMLDivElement>(null);
-  const { setScrollProgress: setContextScroll, replayLoader, loaderStage } = useExperience();
+  const { setScrollProgress: setContextScroll, loaderStage } = useExperience();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);

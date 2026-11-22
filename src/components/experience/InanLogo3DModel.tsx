@@ -3,7 +3,6 @@
 import React, { useRef, useMemo, useEffect, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
-import { useExperience } from "./ExperienceContext";
 
 interface InanLogo3DModelProps {
   scrollProgress: number;
@@ -16,8 +15,6 @@ export function InanLogo3DModel({
   isDark,
   pointer,
 }: InanLogo3DModelProps) {
-  const { loaderStage, loaderProgress } = useExperience();
-
   const rootGroupRef = useRef<THREE.Group>(null);
   const redMeshRef = useRef<THREE.Mesh>(null);
   const blackMeshRef = useRef<THREE.Mesh>(null);

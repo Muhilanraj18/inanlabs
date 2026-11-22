@@ -6,12 +6,7 @@ import { Navbar } from "@/components/navigation/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import {
   ArrowLeft,
-  CheckCircle,
-  ExternalLink,
-  Layers,
-  Terminal,
   Cpu,
-  ShieldCheck,
 } from "lucide-react";
 import type { Metadata } from "next";
 

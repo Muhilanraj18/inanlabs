@@ -10,7 +10,7 @@ interface SceneLightingProps {
   scrollProgress: number;
 }
 
-export function SceneLighting({ isDark, scrollProgress }: SceneLightingProps) {
+export function SceneLighting({ isDark }: SceneLightingProps) {
   const redPointRef = useRef<THREE.PointLight>(null);
   const rimLightRef = useRef<THREE.DirectionalLight>(null);
   const keyLightRef = useRef<THREE.DirectionalLight>(null);

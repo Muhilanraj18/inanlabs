@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 
@@ -10,7 +10,6 @@ interface ExperienceCameraProps {
 
 export function ExperienceCamera({ scrollProgress }: ExperienceCameraProps) {
   const { camera } = useThree();
-  const targetLookAt = useRef(new THREE.Vector3(0, 0, 0));
   const currentLookAt = useRef(new THREE.Vector3(0, 0, 0));
 
   useFrame((_, delta) => {

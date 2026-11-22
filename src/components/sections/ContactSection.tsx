@@ -86,7 +86,7 @@ export function ContactSection() {
               </span>
               <span className="h-px w-10 bg-[#066680]/40" />
               <span className="text-xs font-sans text-[#2d3139] uppercase font-semibold">
-                Let's Build Something
+                Let&apos;s Build Something
               </span>
             </div>
 
@@ -96,7 +96,7 @@ export function ContactSection() {
             </h2>
 
             <p className="text-lg sm:text-xl text-[#181a24] font-medium leading-relaxed">
-              Let's explore what we can create together. Whether you are seeking a
+              Let&apos;s explore what we can create together. Whether you are seeking a
               technical partner, interested in our architecture, or exploring research
               collaboration.
             </p>

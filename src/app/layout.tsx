@@ -55,16 +55,8 @@ export default function RootLayout({
         color: "#f4faf9",
       }}
     >
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body
-        className="min-h-full flex flex-col dark"
+        className="min-h-full flex flex-col dark font-sans"
         style={{
           background: "linear-gradient(180deg, #51e2f5 0%, #9df9ef 22%, #edf7f6 45%, #ffa8b6 72%, #a28089 100%) fixed",
           color: "#f4faf9",

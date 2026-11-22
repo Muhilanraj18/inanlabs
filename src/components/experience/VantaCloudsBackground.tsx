@@ -79,7 +79,7 @@ export function VantaCloudsBackground({ scrollProgress = 0 }: VantaCloudsBackgro
       className="fixed inset-0 w-full h-full pointer-events-none transition-opacity duration-500 overflow-hidden"
       style={{
         zIndex: 0,
-        opacity,
+        opacity: isReady ? opacity : 0,
       }}
       aria-hidden="true"
     />

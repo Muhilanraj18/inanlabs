@@ -33,7 +33,7 @@ export function FutureSection() {
             </h2>
 
             <p className="text-lg sm:text-xl text-[#181a24] font-medium leading-relaxed max-w-2xl">
-              We're building the foundations for ideas that can become useful,
+              We&apos;re building the foundations for ideas that can become useful,
               thoughtful, and lasting digital products.
             </p>
 
