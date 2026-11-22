@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useMemo, useEffect, useState } from "react";
-import { useFrame, useLoader } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { useExperience } from "./ExperienceContext";
 
@@ -134,61 +134,27 @@ export function InanLogo3DModel({
     };
   }, []);
 
-  // 2. Load 4K Procedural PBR Textures
-  const [
-    titaniumNormal,
-    titaniumRoughness,
-    titaniumMetallic,
-    redCandyNormal,
-    redCandyRoughness,
-  ] = useLoader(THREE.TextureLoader, [
-    "/textures/model-4k/titanium_normal_4k.png",
-    "/textures/model-4k/titanium_roughness_4k.png",
-    "/textures/model-4k/titanium_metallic_4k.png",
-    "/textures/model-4k/red_candy_normal_4k.png",
-    "/textures/model-4k/red_candy_roughness_4k.png",
-  ]);
-
-  useEffect(() => {
-    [titaniumNormal, titaniumRoughness, titaniumMetallic, redCandyNormal, redCandyRoughness].forEach((tex) => {
-      tex.wrapS = THREE.RepeatWrapping;
-      tex.wrapT = THREE.RepeatWrapping;
-      tex.repeat.set(1.5, 1.5);
-      tex.anisotropy = 16;
-      tex.generateMipmaps = true;
-      tex.minFilter = THREE.LinearMipmapLinearFilter;
-      tex.magFilter = THREE.LinearFilter;
-    });
-  }, [titaniumNormal, titaniumRoughness, titaniumMetallic, redCandyNormal, redCandyRoughness]);
-
-  // 3. Materials: In both white (light) mode and dark mode, body is ALWAYS black and top mark is ALWAYS red
+  // 2. Procedural PBR Materials — no textures, pure GPU 60fps
   const materials = useMemo(() => {
-    // Pure obsidian titanium black in both light and dark mode
-    const blackColor = "#0c0d12";
-
+    // Pure obsidian titanium black — procedural PBR, zero texture cost
     const blackMat = new THREE.MeshPhysicalMaterial({
-      color: blackColor,
-      roughness: 0.28,
-      metalness: 0.9,
-      normalMap: titaniumNormal,
-      roughnessMap: titaniumRoughness,
-      metalnessMap: titaniumMetallic,
-      clearcoat: 0.4,
-      clearcoatRoughness: 0.18,
-      reflectivity: 0.9,
+      color: "#0c0d12",
+      roughness: 0.18,
+      metalness: 0.92,
+      clearcoat: 0.6,
+      clearcoatRoughness: 0.12,
+      reflectivity: 0.95,
     });
 
     const redMat = new THREE.MeshPhysicalMaterial({
       color: "#ff0022",
       emissive: "#ff0022",
       emissiveIntensity: isDark ? 0.45 : 0.25,
-      roughness: 0.16,
-      metalness: 0.25,
-      normalMap: redCandyNormal,
-      roughnessMap: redCandyRoughness,
+      roughness: 0.14,
+      metalness: 0.35,
       clearcoat: 0.95,
       clearcoatRoughness: 0.08,
-      reflectivity: 0.95,
+      reflectivity: 0.98,
     });
 
     // Chamfer highlights: subtle edge outlines
@@ -209,14 +175,7 @@ export function InanLogo3DModel({
       wireframe: wireframeMat,
       redWireframe: redWireframeMat,
     };
-  }, [
-    isDark,
-    titaniumNormal,
-    titaniumRoughness,
-    titaniumMetallic,
-    redCandyNormal,
-    redCandyRoughness,
-  ]);
+  }, [isDark]);
 
   // Frame Loop - Cinematic smooth presence in hero and anchored background stage
   useFrame((state, delta) => {
@@ -249,7 +208,7 @@ export function InanLogo3DModel({
       velocity.current.y *= 0.93;
 
       // Gentle continuous idle turn when not interacting
-      userRotation.current.y += 0.0022;
+      userRotation.current.y += 0.25 * delta;
 
       // Pitch slowly eases back to neutral level
       userRotation.current.x = THREE.MathUtils.lerp(userRotation.current.x, 0, 0.025);

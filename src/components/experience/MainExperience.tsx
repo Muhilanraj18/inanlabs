@@ -9,15 +9,11 @@ import { LoaderIntro } from "@/components/experience/LoaderIntro";
 import { Navbar } from "@/components/navigation/Navbar";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { OriginSection } from "@/components/sections/OriginSection";
-// IdentitySection removed per user request
-// ExplorationSection removed per user request
 import { EngineeringSection } from "@/components/sections/EngineeringSection";
 import { CapabilitiesSection } from "@/components/sections/CapabilitiesSection";
-// ProductsSection removed per user request
 import { FutureSection } from "@/components/sections/FutureSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/layout/Footer";
-import { GlassSurface } from "@/components/ui/GlassSurface";
 
 function MainContent() {
   const [scrollProgress, setScrollProgress] = useState(0);
